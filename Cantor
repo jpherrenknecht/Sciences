@@ -1,0 +1,25 @@
+import numpy
+import matplotlib.pylab as plt
+
+
+def cantor(n):
+    if n == 0:
+        C = [0., 1.]
+        y = [0., 0.]
+
+    else:
+        C0,y0 = cantor(n - 1)
+
+        C = map(lambda x: x / 3., C0 + map(lambda x: x + 2, C0))
+        y = map(lambda x: x + 1, y0 + y0)
+
+        for i in xrange(0, len(C) - 1):
+            if (i % 2 == 0):
+                plt.plot([C[i], C[i + 1]], [y[i], y[i + 1]], 'k')
+
+        return C,y
+
+
+cantor(7)
+plt.axis([0, 1, -1, 8])
+plt.show()
