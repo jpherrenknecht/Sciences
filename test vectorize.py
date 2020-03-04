@@ -7,7 +7,7 @@ def fonction(val):
     if val<3:
         val=0
     else:
-        val=2*val + 4
+        val=2*val + 5
     return val
 
 
