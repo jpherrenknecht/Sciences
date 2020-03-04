@@ -1,7 +1,7 @@
 import numpy as np
 
 
-A=np.array([2,5,7])
+A=np.array([2,1,7])
 
 def fonction(val):
     if val<3:
@@ -10,8 +10,10 @@ def fonction(val):
         val=2*val + 3
     return val
 
+
+
 fonc= np.vectorize(fonction)
-a=2
+a=
 print(fonc(A))
 
 
